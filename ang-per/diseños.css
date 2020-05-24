@@ -1,0 +1,93 @@
+#xUnoP, #yUnoP, #xUnoS, #yUnoS 
+{
+    text-align: center;
+}
+
+#coordenadas:hover, #mouse:hover
+{
+    color: black;
+    background-color: red;
+    border-color: white;
+}
+
+#button_C:hover
+{
+    color: black;
+    background-color: yellow;
+    border-color: gray;
+}
+
+#button_C, #coordenadas, #mouse
+{
+    width: 150px;
+    height: 30px;
+    background-color: gray;
+    border-color: black;
+    color: white;
+    font-family: Arial;
+    border-radius: 10px;    
+}
+
+body
+{
+    text-align: center;
+    background-color: orange;
+    font-family: Arial;
+    color: white;    
+}
+
+#ventana
+{
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    top:458px;
+    left:300px;
+    width:700px;
+    height:180px;
+    align: center;
+    overflow: hidden;
+    background-color: red;
+    padding:10px;
+    text-align:center;
+    display: none;
+}
+#puntoDeArranque
+{
+    border-collapse: collapse;
+    background-color: white;
+    float: left;
+    border: 2px solid;
+}
+#puntoDeArranque td
+{
+    border-color: black;
+    background-color: gray;
+    font-family: Arial;
+    color: white;
+    border: 2px solid;
+}
+#puntoDeLlegada
+{
+    border-collapse: collapse;
+    background-color: white;
+    float: left;
+    border: 2px solid;
+}
+#puntoDeLlegada td
+{
+    border-color: black;
+    background-color: gray;
+    font-family: Arial;
+    color: white;
+    border: 2px solid;
+}
+#contexto
+{
+    border-radius: 25px;
+    background-color: white;
+}
+h1, h3, p
+{
+    background-color: black;
+}

@@ -4,13 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final By AngelPerez</title>
+    <link type="text/css" href="diseños.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Bienvenido a Canvas_Express!</h1>
     <p>Aquí puedes dibujar todo lo que puedas imaginar!</p>
     <br />
     <canvas width="300" height="300" id="contexto"></canvas>
+    <h3>Con Que Quieres Dibujar?</h3>
+
+    <div>
+        <input type="button" id="coordenadas" value="COORDENADAS!" />
+        <input type="button" id="mouse" value="MOUSE Y TECLAS!" />
+    </div>
     <p>Que buen dibujo! Deberias dedicarte a esto ;)</p>
-    
+
+    <div id="ventana">
+        <h2>Dibujemos con Coordenadas!</h2>
+        <div id="n">
+            <table id="puntoDeArranque">
+                <tr>
+                    <td colspan="2">
+                        Punto de Arranque
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Punto en X1
+                    </td>
+                    <td>
+                        Punto en Y1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="xUnoP" />
+                    </td>
+                    <td>
+                        <input type="number" id="yUnoS" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="m">
+            <table id="puntoDeLlegada">
+                <tr>
+                    <td colspan="2">
+                        Punto de Llegada
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Punto en X1
+                    </td>
+                    <td>
+                        Punto en Y1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="xUnoP" />
+                    </td>
+                    <td>
+                        <input type="number" id="yUnoS" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />  
+            <input type="button" id="button_C" value="DIBUJAR!" />
+    </div>
+    <script src="funcionalidades.js"></script>
 </body>
 </html>
