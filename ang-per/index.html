@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final By AngelPerez</title>
+    <link type="text/css" href="diseños.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Bienvenido a Canvas_Express!</h1>
@@ -11,11 +12,66 @@
     <br />
     <canvas width="300" height="300" id="contexto"></canvas>
     <h3>Con Que Quieres Dibujar?</h3>
+
     <div>
         <input type="button" id="coordenadas" value="COORDENADAS!" />
         <input type="button" id="mouse" value="MOUSE Y TECLAS!" />
     </div>
     <p>Que buen dibujo! Deberias dedicarte a esto ;)</p>
+
+    <div id="ventana">
+        <h2>Dibujemos con Coordenadas!</h2>
+        <div id="puntoDeSalida">
+            <table id="puntoDeArranque">
+                <tr>
+                    <td colspan="2">
+                        <p>Punto de Arranque</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Punto en X1</p>
+                    </td>
+                    <td>
+                        <p>Punto en Y1</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="xUno" />
+                    </td>
+                    <td>
+                        <input type="number" id="yUno" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table id="puntoDeLlegada">
+                <tr>
+                    <td colspan="2">
+                        <p>Punto de Arranque</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Punto en X1</p>
+                    </td>
+                    <td>
+                        <p>Punto en Y1</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" id="xUno" />
+                    </td>
+                    <td>
+                        <input type="number" id="yUno" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
     
 </body>
 </html>

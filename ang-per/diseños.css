@@ -1,0 +1,16 @@
+#ventana
+{
+    background-color: red;
+    padding:10px;
+    text-align:center;
+}
+#puntoDeArranque
+{
+    background-color: white;
+    float: left;
+    border: 1px solid;
+}
+#puntoDeArranque td
+{
+    border: 1px solid;
+}
