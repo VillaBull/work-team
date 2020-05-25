@@ -28,28 +28,37 @@
     </form>
     <script>
         alert("Ánimo Crack!!! Tú puedes!!! :D");
+        var numpc = parseInt(Math.random()*101);
+        var i;
+        i=1;
+        i = parseInt(i);
         function random(){
-            var numpc = parseInt(Math.random()*101);
-            var ganper= false;
             var numusuario = document.getElementById("numus").value;
-            if(numusuario==""){
-                alert("Debe ingresar un número")
-            }else{
-                numusuario = parseInt(numusuario);
-            }
-            for(var i = 0; i<10; i++){
-                if(numpc==numusuario){
+            var ganper= false;
+            do{
+                
+                if(numusuario.trim()==""){
+                    alert("Debe ingresar un número");
+                }else{
+                    numusuario = parseInt(numusuario);
+                }
+                if(numusuario==numpc){
                     alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
                     ganper=true;
                     break;
                 }else{
-                    if(numusuario<numpc){
-                        alert("El número que debes adivinar es mayor, intento No. "(i+1));
+                    if(numpc<numusuario){
+                        alert("El número que debes adivinar es menor, intento No. "+ (i));
                     }else{
-                        alert("El número que debes adivinar es menor, intento No. "(i+1));
+                        alert("El número que debes adivinar es mayor, intento No. "+ (i));
                     }
                 }
-            }
+                if(i==10){
+                alert("Perdiste :c, el número que tenías que adivinar era el "+numpc);
+            } 
+                i++;  
+            }while(i==10);
+            
         }
     </script>
 </body>
