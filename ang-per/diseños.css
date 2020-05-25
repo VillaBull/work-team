@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-#coordenadas:hover, #mouse:hover
+#coordenadas:hover, #mouse:hover, #teclas:hover
 {
     background-color: red;
     border-color: white;
@@ -16,7 +16,7 @@
     border-color: gray;
 }
 
-#button_C, #coordenadas, #mouse
+#button_C, #coordenadas, #mouse, #teclas
 {
     width: 150px;
     height: 30px;
