@@ -36,6 +36,12 @@
                 alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
                 ganper=true;
                 break;
+            }else{
+                if(numusuario<numpc){
+                    alert("El número que debes adivinar es mayor, intento No. "(i+1));
+                }else{
+                    alert("El número que debes adivinar es menor, intento No. "(i+1));
+                }
             }
         }
     </script>
