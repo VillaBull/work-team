@@ -22,12 +22,15 @@
     <br><br><br>
     <form action="post">
         <label for="">Ingresa el número que piensas</label>
-        <input type="text" placeholder="Ejemplo: 77" required>
+        <input type="text" id="numus" placeholder="Ejemplo: 77" required>
         <br>
         <button onclick="random()">Iniciar Juego</button>
     </form>
     <script>
         alert("Ánimo Crack!!! Tú puedes!!! :D");
+        var numpc = parseInt(Math.random()*101);
+        var ganper= false;
+        var numusuario = document.getElementById("numus").value;
     </script>
 </body>
 </html>
