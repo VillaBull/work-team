@@ -1,3 +1,13 @@
+#exit_T
+{
+    background-color: red;
+    border-color: black;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 665px;
+}
+
 #exit
 {
     background-color: red;
@@ -8,15 +18,21 @@
     left: 685px;
 }
 
-#exit:hover
+#exit:hover, #exit_T:hover
 {
     border-color: white;
 }
 
-#xUnoP, #yUnoP, #xUnoS, #yUnoS, #coloron
+#xUnoP, #yUnoP, #xUnoS, #yUnoS, #coloron, #color_C
 {
     text-align: center;
     border: 2px solid;
+}
+#uno, #dos
+{
+    text-align: center;
+    border: 2px solid;
+    width: 50px;
 }
 
 #coor:hover, #mouse:hover, #teclas:hover
@@ -25,14 +41,29 @@
     border-color: white;
 }
 
-#button_C:hover
+#ventana_C
+{
+    background-color: aqua;
+    border: 1px solid;
+    border-color: black;
+    width: 700px;
+    height: 185px;
+    border-radius: 20px;
+    position: absolute;
+    top:540px;
+    left:300px;
+    color: black;
+    display: none;
+}
+
+#button_C:hover, #ya:hover
 {
     color: black;
     background-color: yellow;
     border-color: gray;
 }
 
-#button_C, #coor, #mouse, #teclas
+#button_C, #coor, #mouse, #teclas, #ya
 {
     width: 150px;
     height: 30px;
