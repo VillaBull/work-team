@@ -32,7 +32,11 @@
         var ganper= false;
         var numusuario = document.getElementById("numus").value;
         for(var i = 0; i<10; i++){
-            
+            if(numpc==numusuario){
+                alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
+                ganper=true;
+                break;
+            }
         }
     </script>
 </body>
