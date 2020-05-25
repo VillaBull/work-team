@@ -34,7 +34,6 @@
         i = parseInt(i);
         function random(){
             var numusuario = document.getElementById("numus").value;
-            var ganper= false;
             do{
                 
                 if(numusuario.trim()==""){
@@ -44,7 +43,6 @@
                 }
                 if(numusuario==numpc){
                     alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
-                    ganper=true;
                     break;
                 }else{
                     if(numpc<numusuario){
