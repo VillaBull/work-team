@@ -1,9 +1,9 @@
-#xUnoP, #yUnoP, #xUnoS, #yUnoS 
+#xUnoP, #yUnoP, #xUnoS, #yUnoS, #coloron
 {
     text-align: center;
 }
 
-#coordenadas:hover, #mouse:hover, #teclas:hover
+#coor:hover, #mouse:hover, #teclas:hover
 {
     background-color: red;
     border-color: white;
@@ -16,7 +16,7 @@
     border-color: gray;
 }
 
-#button_C, #coordenadas, #mouse, #teclas
+#button_C, #coor, #mouse, #teclas
 {
     width: 150px;
     height: 30px;
@@ -43,7 +43,7 @@ body
     top:458px;
     left:300px;
     width:700px;
-    height:180px;
+    height:165px;
     overflow: hidden;
     background-color: red;
     padding:10px;
