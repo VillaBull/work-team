@@ -24,7 +24,7 @@
         <label for="">Ingresa el número que piensas</label>
         <input type="text" id="numus" placeholder="Ejemplo: 77" required>
         <br>
-        <button onclick="random()">Iniciar Juego</button>
+        <input type="button" value="Intentar" onclick="random()">
     </form>
     <script>
         alert("Ánimo Crack!!! Tú puedes!!! :D");
@@ -32,6 +32,11 @@
             var numpc = parseInt(Math.random()*101);
             var ganper= false;
             var numusuario = document.getElementById("numus").value;
+            if(numusuario==""){
+                alert("Debe ingresar un número")
+            }else{
+                numusuario = parseInt(numusuario);
+            }
             for(var i = 0; i<10; i++){
                 if(numpc==numusuario){
                     alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
