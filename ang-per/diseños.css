@@ -1,6 +1,22 @@
+#exit
+{
+    background-color: red;
+    border-color: black;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 685px;
+}
+
+#exit:hover
+{
+    border-color: white;
+}
+
 #xUnoP, #yUnoP, #xUnoS, #yUnoS, #coloron
 {
     text-align: center;
+    border: 2px solid;
 }
 
 #coor:hover, #mouse:hover, #teclas:hover
@@ -40,10 +56,10 @@ body
     color: white;
     border-radius: 20px;
     position: absolute;
-    top:458px;
+    top:540px;
     left:300px;
     width:700px;
-    height:165px;
+    height:185px;
     overflow: hidden;
     background-color: red;
     padding:10px;

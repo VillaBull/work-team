@@ -1,6 +1,10 @@
-var coordenadas = document.getElementById("coor");
+var coordenadas = document.getElementById("coor").addEventListener("click", coordenada);;
+var exi = document.getElementById("exit").addEventListener("click", exit1);
 
-coordenadas.addEventListener("click", coordenada);
+function exit1()
+{
+    document.getElementById("ventana").style.display="none";
+}
 
 function dib(color, x1, y1, x2, y2, l)
 {
@@ -14,6 +18,7 @@ function dib(color, x1, y1, x2, y2, l)
 
 function coordenada()
 {
+    alert("Recuerda que el Canvas es de 400x400!");
     p = document.getElementById("contexto").getContext("2d");
 
     document.getElementById("ventana").style.display="block";
