@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br><br><br>
+    <h1>Instrucciones:</h1>
+    <h3>El juego consiste en que que tienes que adivinar un número entre 0 y 50, para eso cuentas con
+        un total de 10 intentos, cada vez que ingreses un número te aparecerá un mensaje diciendo si
+        el núemro que debes adivinar es mayor o es menor, si no logras adivinar el núemro al final se 
+        te mostrará cual era el numero que debias adivinar y te apareceran cuales fueron los números que
+        fueron ingresados, por el contrario, si adivinas te aparecerá un mensaje de felicitación.
+    </h3>
+    <br><br><br>
+    <form action="post">
+        <label for="">Ingresa el número que piensas</label>
+        <input type="text" id="numus" placeholder="Ejemplo: 77" required>
+        <br>
+        <input type="button" value="Intentar" onclick="random()">
+    </form>
+    <script>
+        alert("Ánimo Crack!!! Tú puedes!!! :D");
+        var numpc = parseInt(Math.random()*101);
+        var i;
+        i=1;
+        i = parseInt(i);
+        function random(){
+            var numusuario = document.getElementById("numus").value;
+            do{
+                
+                if(numusuario.trim()==""){
+                    alert("Debe ingresar un número");
+                    i=1;
+                }else{
+                    numusuario = parseInt(numusuario);
+                }
+                if(numusuario==numpc){
+                    alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
+                    break;
+                }else{
+                    if(numpc<numusuario){
+                        alert("El número que debes adivinar es menor, intento No. "+ (i));
+                    }else{
+                        alert("El número que debes adivinar es mayor, intento No. "+ (i));
+                    }
+                }
+                if(i==10){
+                alert("Perdiste :c, el número que tenías que adivinar era el "+numpc);
+            } 
+                i++;  
+            }while(i==10);
+            
+        }
+    </script>
+</body>
+</html>
