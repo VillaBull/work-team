@@ -1,7 +1,12 @@
-var coordenadas = document.getElementById("coor").addEventListener("click", coordenada);;
+var coordenadas = document.getElementById("coor").addEventListener("click", coordenada);
 var exi = document.getElementById("exit").addEventListener("click", exit1);
 var tec = document.getElementById("teclas").addEventListener("click", teclasi);
 var p = document.getElementById("contexto").getContext("2d");
+
+function sa()
+{
+    document.getElementById("ventana_C").style.display="none";
+}
 
 function exit1()
 {
@@ -52,39 +57,46 @@ function teclasi()
 
 function dibuj()
     {
-        console.log("khe");
+        var xT = document.getElementById("uno");
+        var yT = document.getElementById("dos");
+        var yT1 = parseInt(yT.value);
+        var xT1 = parseInt(xT.value);
+
+        alert("Presiona Cualquier Tecla de Movimiento y mira la magia!")
         document.addEventListener("keydown", khe);
+        dib("black", xT1, yT1, xT1 + 1, yT1 + 1, p);
 
 function khe(vari)
         {
-        console.log("ja!");
-        var teclas = {LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40};
-
-        var p = document.getElementById("contexto").getContext("2d");
-        var colorci_C =document.getElementById("color_C");
-        var x = document.getElementById("uno");
-        var xy = x.value;
-        var y = document.getElementById("dos");
-        var yx = y.value;
-        var avance = 10;
+            var teclas = {LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40};
+            var c= document.getElementById("color_C").value;
+            var xT = document.getElementById("uno");
+            var yT = document.getElementById("dos");
+            var yT1 = parseInt(yT.value);
+            var xT1 = parseInt(xT.value);
+            var avance = 10;
+            var avance = parseInt(avance);
 
         switch(vari.keyCode)
         {
             case teclas.LEFT:
-                dib(colorci_C.value, xy, yx, xy - avance, yx, p);
-                xy = xy - avance;
+                dib(c, xT1, yT1, xT1 - avance, yT1, p);
+                xT.value = parseInt(xT.value) - parseInt(avance); 
             break;
+
             case teclas.UP:
-                dib(colorci_C.value, xy, yx, xy, yx - avance, p);
-                yx = yx - avance;
+                dib(c, xT1, yT1, xT1, yT1 - avance, p);
+                yT.value = parseInt(yT.value) - parseInt(avance);
             break;
+
             case teclas.RIGHT:
-                dib(colorci_C.value, xy, yx, xy + avance, yx, p);
-                xy = xy + avance;
+                dib(c, xT1, yT1, xT1 + avance, yT1, p)
+                xT.value= parseInt(xT.value) + parseInt(avance);
             break;
+
             case teclas.DOWN:
-                dib(colorci_C.value, xy, yx, xy, yx + avance, p);
-                yx = yx + avance;
+                dib(c, xT1, yT1, xT1, yT1 + avance, p)
+                yT.value = parseInt(yT.value) + parseInt(avance);
             break;
         }
 

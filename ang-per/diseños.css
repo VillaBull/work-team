@@ -1,4 +1,12 @@
-#exit_T
+#color_C
+{
+    text-align: center;
+    border: 2px solid;
+    width: 70px;
+    height: 15px;
+}
+
+#clsb
 {
     background-color: red;
     border-color: black;
@@ -18,12 +26,12 @@
     left: 685px;
 }
 
-#exit:hover, #exit_T:hover
+#exit:hover, #clsb:hover
 {
     border-color: white;
 }
 
-#xUnoP, #yUnoP, #xUnoS, #yUnoS, #coloron, #color_C
+#xUnoP, #yUnoP, #xUnoS, #yUnoS, #coloron
 {
     text-align: center;
     border: 2px solid;
