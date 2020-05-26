@@ -10,7 +10,7 @@
     <h1>Bienvenido a Canvas_Express!</h1>
     <p>Aquí puedes dibujar todo lo que puedas imaginar!</p>
     <br />
-    <canvas width="300" height="300" id="contexto"></canvas>
+    <canvas width="400" height="400" id="contexto"></canvas>
     <h3>Con Que Quieres Dibujar?</h3>
 
     <div>
@@ -22,6 +22,7 @@
 
     <div id="ventana">
         <h2>Dibujemos con Coordenadas!</h2>
+        <input type ="button" id="exit" value="X" />
         <div id="n">
             <table id="puntoDeArranque">
                 <tr>
@@ -74,10 +75,24 @@
         </div>
         <br />  
         <br />
-            <label for ="coloron">De que color será la linea que trazarás?</label>
+            <label for ="coloron">De que color será la linea que trazarás? (color en Ingles)</label>
             <input type="text" id="coloron" />
             <input type="button" id="button_C" value="DIBUJAR!" />
     </div>
     <script src="funcionalidades.js"></script>
+    <div id="ventana_C">
+        <input type="button" id="clsb" value="X" onclick="sa()" />
+        <h2>Dibujemos Con las Teclas!</h2>
+        <label for="uno">Cual será tu punto de Partida?</label>
+        <input type="number" id="uno" />
+        <input type="number" id="dos" />
+        <br />
+        <br />
+        <label for="color_C">De que color será la linea que trazarás? (color en Ingles)(Puedes Cambiarlo!)</label>
+        <input type="text" id="color_C" />
+        <br />
+        <br />
+        <input type="button" id="ya" value="A DIBUJAR!" />
+    </div>
 </body>
 </html>
