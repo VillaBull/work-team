@@ -5,6 +5,9 @@ var p = document.getElementById("contexto").getContext("2d");
 
 function sa()
 {
+    document.getElementById("uno").value= "";
+    document.getElementById("dos").value = "";
+    document.getElementById("color_C").value = "";
     document.getElementById("ventana_C").style.display="none";
 }
 

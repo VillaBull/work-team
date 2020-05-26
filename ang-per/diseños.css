@@ -43,7 +43,7 @@
     width: 50px;
 }
 
-#coor:hover, #mouse:hover, #teclas:hover
+#coor:hover, #mouse:hover, #teclas:hover, #descarga:hover
 {
     background-color: red;
     border-color: white;
@@ -64,11 +64,39 @@
     display: none;
 }
 
-#button_C:hover, #ya:hover
+#button_C:hover, #ya:hover, #pag_P:hover
 {
     color: black;
     background-color: yellow;
     border-color: gray;
+}
+
+#pag_P
+{
+    width: 170px;
+    height: 30px;
+    background-color: gray;
+    border-color: black;
+    color: white;
+    font-family: Arial;
+    border-radius: 10px;  
+    position: absolute;
+    top: 750px;
+    left: 550px;
+}
+
+#descarga
+{
+    width: 170px;
+    height: 30px;
+    background-color: gray;
+    border-color: black;
+    color: white;
+    font-family: Arial;
+    border-radius: 10px;  
+    position: absolute;
+    top: 675px;
+    left: 10px;
 }
 
 #button_C, #coor, #mouse, #teclas, #ya
