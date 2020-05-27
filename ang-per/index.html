@@ -16,7 +16,6 @@
     <div>
         <input type="button" id="coor" value="COORDENADAS!" />
         <input type="button" id="teclas" value="TECLAS!" />
-        <input type="button" id="mouse" value="EL MOUSE!" />
     </div>
     <p>Que buen dibujo! Deberias dedicarte a esto ;)</p>
 
@@ -40,10 +39,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="number" id="xUnoP" />
+                        <input type="number" id="xUnoP" placeholder="(0-400)" required />
                     </td>
                     <td>
-                        <input type="number" id="yUnoP" />
+                        <input type="number" id="yUnoP" placeholder="(0-400)" required />
                     </td>
                 </tr>
             </table>
@@ -65,10 +64,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="number" id="xUnoS" />
+                        <input type="number" id="xUnoS" placeholder="(0-400)" required />
                     </td>
                     <td>
-                        <input type="number" id="yUnoS" />
+                        <input type="number" id="yUnoS" placeholder="(0-400)" required/>
                     </td>
                 </tr>
             </table>
@@ -76,23 +75,26 @@
         <br />  
         <br />
             <label for ="coloron">De que color será la linea que trazarás? (color en Ingles)</label>
-            <input type="text" id="coloron" />
+            <input type="text" id="coloron" placeholder="Ej = Red" required />
             <input type="button" id="button_C" value="DIBUJAR!" />
     </div>
-    <script src="funcionalidades.js"></script>
+   
     <div id="ventana_C">
         <input type="button" id="clsb" value="X" onclick="sa()" />
         <h2>Dibujemos Con las Teclas!</h2>
         <label for="uno">Cual será tu punto de Partida?</label>
-        <input type="number" id="uno" />
-        <input type="number" id="dos" />
+        <input type="number" id="uno" placeholder="En=X" required />
+        <input type="number" id="dos" placeholder="En=Y" required />
         <br />
         <br />
         <label for="color_C">De que color será la linea que trazarás? (color en Ingles)(Puedes Cambiarlo!)</label>
-        <input type="text" id="color_C" />
+        <input type="text" id="color_C" placeholder="Ej=Orange" required />
         <br />
         <br />
         <input type="button" id="ya" value="A DIBUJAR!" />
     </div>
+    <a href="archivosExtras/Manua_De_Usuario.pdf" download><input type="button" id="descarga" value="MANUAL DE USUARIO!" /></a>
+    <a href="principal.html" ><input type="button" id="pag_P" value="PAGINA PRINCIPAL" /></a>
+    <script src="funcionalidades.js"></script>
 </body>
 </html>

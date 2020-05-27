@@ -5,6 +5,9 @@ var p = document.getElementById("contexto").getContext("2d");
 
 function sa()
 {
+    document.getElementById("uno").value= "";
+    document.getElementById("dos").value = "";
+    document.getElementById("color_C").value = "";
     document.getElementById("ventana_C").style.display="none";
 }
 
@@ -57,12 +60,13 @@ function teclasi()
 
 function dibuj()
     {
+        document.getElementById("ya").disabled = true;
         var xT = document.getElementById("uno");
         var yT = document.getElementById("dos");
         var yT1 = parseInt(yT.value);
         var xT1 = parseInt(xT.value);
 
-        alert("Presiona Cualquier Tecla de Movimiento y mira la magia!")
+        alert("Presiona Cualquier Tecla Direccional y mira la magia! ;)");
         document.addEventListener("keydown", khe);
         dib("black", xT1, yT1, xT1 + 1, yT1 + 1, p);
 
