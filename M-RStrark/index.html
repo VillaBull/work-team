@@ -21,14 +21,18 @@
     <input type="text" id = "cuadro" name="cuadro"  required
            minlength="4" maxlength="8" size="10">
 
-           <div>
+           <form>
 
-            <input type="button" onclick =cal   > Calificar </button>
+            <input type="button" value="correcto"> Calificar </button>
             
-            </div>
+           </form>
             
     <br>
 <script>
+const button = document.querySelector("input");
+cosnt paragraph;  = document.querySelector("p");
+
+
     var ga = "gato";
     var pla = "planeta";
     var ca = "camello";
@@ -58,7 +62,7 @@
     
 
     <ul class="galeria ">
-        <li><h2>Imagen No. 1</h2><a href=""><img src="1.jpeg"></a></li>
+        <li><h2>Imagen No. 1</h2><a href="" id= "1"><img src="1.jpeg"></a></li>
         <li><h2>Imagen No. 2</h2><a href=""><img src="2.jpeg"></a></li>
         <li><h2>Imagen No. 3</h2><a href=""><img src="3.jpeg"></a></li>
     </ul>
