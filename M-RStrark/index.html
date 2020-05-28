@@ -8,13 +8,55 @@
 </head>
 <body>
     <h1>Juego de Estereogramas </h1>
-    <p>Encontraras 3 Imagenes Estereogramas, dentro de ellas un obejeto guardado</p>
-    <p>Un tip: ponte los ojos in visco y veras la magia</p>
+    <p>Encontraras 3 Imagenes Estereogramas, dentro de ellas un objeto guarda</p>
+    <p>Cuando termines escribe lo que viste al final de las imagenes</p>
+    <h2>Recomendaciones...</h2>
+    <h2>Si el objeto quieres buscar, los ojos de un visco tendras que usar!</h2>
+    <h2> Si el objeto quieres averiguar, cerca de tu pantalla debes estár!</h2>
+
     <ul class="galeria ">
-        <li><a href=""><img src=".1.jpeg"></a></li>
-        <li><a href=""><img src="2.jpeg"></a></li>
-        <li><a href=""><img src="3.jpeg"></a></li>
+        <li><h2>Imagen No. 1</h2><a href=""><img src="1.jpeg"></a></li>
+        <li><h2>Imagen No. 2</h2><a href=""><img src="2.jpeg"></a></li>
+        <li><h2>Imagen No. 3</h2><a href=""><img src="3.jpeg"></a></li>
     </ul>
+    <label for="gato" >Nombre de la primera imagen:</label>
+
+<input type="text" id="imagen1" name="Imagen 1" required
+       minlength="4" maxlength="8" size="10">
+
+
+       <label for="">Nombre de la segunda imagen:</label>
+       <input type="text" id="imagen2" name="Imagen 2" required
+       minlength="4" maxlength="8" size="10">
+
+       <label for="name">Nombre de la tercera imagen:</label>
+      <input type="text" id="imagen3" name="Imagen 3" required
+       minlength="4" maxlength="8" size="10">
+      
+
+    <script type="text/javascript">
+    var imagen1 = 0;
+    var imagen2 = 0;
+    var imagen3 = 0;
+
+    while(Palabra!="Gato"){
+        imagen1++;
+
+    }alert("correcto!!!");
+
+    while(Palabra!="Planeta"){
+        imagen2++;
+
+    }alert("correcto!!!");
+
+
+    while(Palabra!="Camello"){
+        imagen3++;
+
+    }alert("correcto!!!");
+        
+
+    </script>
     
 </body>
 </html>

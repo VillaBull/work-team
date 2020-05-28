@@ -1,0 +1,38 @@
+body{
+    background: #D7BDE2;
+    margin: 0;
+    font-family: monospace;
+
+}
+h1{
+    color: #17202A;
+    text-align: center;
+
+}
+p{
+    color: #17202A;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*estilos de la galeria */
+.galeria{
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria li {
+    margin: 5px;
+}
+
+.galeria img{
+    width: 850px;
+    height: 700px;
+}
