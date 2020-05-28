@@ -9,23 +9,38 @@
 <body>
     <h1>Juego de Estereogramas </h1>
     <p>Encontraras 3 Imagenes Estereogramas, dentro de ellas un objeto guarda</p>
+    <p>Eligue una imagen</p>
     <p>Cuando termines escribe lo que viste al final de las imagenes</p>
     <h2>Recomendaciones...</h2>
     <h2>Si el objeto quieres buscar, los ojos de un visco tendras que usar!</h2>
     <h2> Si el objeto quieres averiguar, cerca de tu pantalla debes estár!</h2>
 
-    <label for="objeto">Que objeto viste </label>
-    <input list="estereo" id="objeto" name="objeto" />
-    
-    <datalist id="estereo">
-        <option value="Perro">
-        <option value="Gato">
-        <option value="planeta">
-        <option value="flor">
-        <option value="camello">
-    </datalist>
+
+    <label for="cuadro">Esribe el objeto que viste </label>
+
+    <input type="text" id="cua" name="cua" required
+           minlength="4" maxlength="8" size="10">
+           <button onclick="cal" >Calificar </button>
     <br>
-    <button>Correcto</button>
+<script>
+    var ga = "gato";
+    var pla = "planeta";
+    var ca = "camello";
+    var cal = "calificar";
+    var cua = "cuadro "
+
+    for (intentos; intentos < 5; intentos ++)
+
+    if(cal = gato || planeta || camello){
+
+    } else {
+        alert(" Game over ")
+    } 
+    if( cal == gato || planeta || camello){
+        alert("Felicidades lograste ver los estereogramas")
+    }
+    
+</script>
     
 
     <ul class="galeria ">
