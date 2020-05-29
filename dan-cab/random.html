@@ -14,14 +14,31 @@
         table{
             width: 500px;
             height: 400px;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+        label{
+            font-size: 20px;
+        }
+        .button{
+            width: 125px;
+            height: 30px;
+            font-size: 16px;
+            background-color: rgb(0, 236, 20);
+            border: black;
+            border-radius: 25px;
+        }
+        .button:hover{
+            color: white;
+            background-color: black;
+            cursor: pointer;
         }
 
     </style>
 </head>
-<body>
+<body background="C:\laragon\www\work-team\dan-cab\img\slide7.jpg"> 
     <br><br><br><br><br>
     <center>
-        <table border="">
+        <table>
             <tr>
                 <th colspan="2">
                     <h1>Instrucciones:</h1>
@@ -55,10 +72,22 @@
             </tr>
             <tr>
                 <th>
-                    <input type="button" value="Adivinar número" onclick="random()">
+                    <h1></h1>
                 </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Adivinar número" onclick="random()" class="button">
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                        <a href="C:\laragon\www\work-team\index.html"><input class="button" type="button" value="Menú Principal"></a>
+                </th>
+            </tr>
+            <tr>
                 <th>
-                    <a href="C:\laragon\www\work-team\index.html"><input type="button" value="Menú Principal"></a>
+                    <h1></h1>
                 </th>
             </tr>
         </table>
