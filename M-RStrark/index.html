@@ -10,65 +10,47 @@
     <h1>Juego de Estereogramas </h1>
     <p>Encontraras 3 Imagenes Estereogramas, dentro de ellas un objeto guarda</p>
     <p>Eligue una imagen</p>
-    <p>Cuando termines escribe lo que viste al final de las imagenes</p>
+    <p>Cuando termines Selecciona el objeto que viste</p>
     <h2>Recomendaciones...</h2>
     <h2>Si el objeto quieres buscar, los ojos de un visco tendras que usar!</h2>
     <h2> Si el objeto quieres averiguar, cerca de tu pantalla debes estár!</h2>
 
 
-    <label for="cuadro">Esribe el objeto que viste </label>
+    
 
-    <input type="text" id = "cuadro" name="cuadro"  required
-           minlength="4" maxlength="8" size="10">
+           
+            <label for="mani">Escoja el objeto que vio </label>
 
-           <form>
-
-            <input type="button" value="correcto"> Calificar </button>
+            <select  id="mani">
+                
+                <option >gato</option>
+                <option >perro</option>
+                <option >culebra</option>
+                <option >planeta </option>
+                <option >añara</option>
+                <option >camello</option>
+            </select>
             
-           </form>
+
+            <input type="button" id="seleccion" value="correcto" onclick="elegir()"  />
             
-    <br>
-<script>
-const button = document.querySelector("input");
-cosnt paragraph;  = document.querySelector("p");
+         
+            
+   
 
+<script src="funcion.js">
 
-    var ga = "gato";
-    var pla = "planeta";
-    var ca = "camello";
-    var cal = "" ;
-    
-    
-
-    for (intentos; intentos < 5; intentos ++){
-
-    if(cal == gato ){
-
-    } else {
-        alert(" Game over ")
-    } 
-    if( cal == planeta){
-        
-       }else {  alert(" game over ")
-
-       }
-    if( cal == camello){
-       
-    }else { alert(" game over ") 
-    }
-    }
-    
 </script>
-    
+
+ 
 
     <ul class="galeria ">
-        <li><h2>Imagen No. 1</h2><a href="" id= "1"><img src="1.jpeg"></a></li>
-        <li><h2>Imagen No. 2</h2><a href=""><img src="2.jpeg"></a></li>
-        <li><h2>Imagen No. 3</h2><a href=""><img src="3.jpeg"></a></li>
+        
+        <li><h2>Imagen No. 1</h2><a href=""><img src="3.jpeg"></a></li>
     </ul>
     
 
-    </script>
+   
     
 </body>
 </html>
