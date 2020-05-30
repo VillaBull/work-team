@@ -49,3 +49,16 @@ p{
 #perro:hover{
     background-color: crimson;
 }
+
+#seleccion{
+    background-color: lavender;
+    width: 150;
+    height: 50px;
+    border-color: midnightblue;
+    border-radius: 25px;
+    color: skyblue;
+}
+
+#perro:hover{
+    background-color: violet;
+}
