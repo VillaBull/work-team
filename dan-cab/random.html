@@ -8,26 +8,92 @@
         body{
             text-align: center;
         }
+        p{
+            text-align: justify;
+        }
+        table{
+            width: 500px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+        label{
+            font-size: 20px;
+        }
+        .button{
+            width: 125px;
+            height: 30px;
+            font-size: 16px;
+            background-color: rgb(0, 236, 20);
+            border: black;
+            border-radius: 25px;
+        }
+        .button:hover{
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+
     </style>
 </head>
-<body>
+<body background="C:\laragon\www\work-team\dan-cab\img\slide7.jpg"> 
     <br><br><br><br><br>
-    <h1>Instrucciones:</h1>
-    <h3>El juego consiste en que que tienes que adivinar un número entre 0 y 50, para eso cuentas con
-        un total de 10 intentos, cada vez que ingreses un número te aparecerá un mensaje diciendo si
-        el núemro que debes adivinar es mayor o es menor, si no logras adivinar el núemro al final se 
-        te mostrará cual era el numero que debias adivinar y te apareceran cuales fueron los números que
-        fueron ingresados, por el contrario, si adivinas te aparecerá un mensaje de felicitación.
-    </h3>
-    <br><br><br>
-    <form action="post">
-        <label for="">Ingresa el número que piensas</label>
-        <input type="text" id="numus" placeholder="Ejemplo: 77" required>
-        <br>
-        <input type="button" value="Intentar" onclick="random()">
-    </form>
+    <center>
+        <table>
+            <tr>
+                <th colspan="2">
+                    <h1>Instrucciones:</h1>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <p>El juego consiste en que que tienes que adivinar un número entre 0 y 100.</p>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <p>Para eso cuentas con un total de 7 intentos, cada vez que ingreses un número te aparecerá un mensaje diciendo si
+                        el núemro que debes adivinar es mayor o es menor.</p>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <p>si no logras adivinar el núemro al final se te mostrará cual era el numero que debias adivinar y te apareceran cuales fueron los números que
+                        ingresaste, por el contrario, si adivinas te aparecerá un mensaje de felicitación</p>
+                        <br>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="">Ingresa el número que piensas</label>
+                </th>
+                <th>
+                    <input type="text" id="numus" placeholder="Ejemplo: 77" required>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h1></h1>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Adivinar número" onclick="random()" class="button">
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                        <a href="C:\laragon\www\work-team\index.html"><input class="button" type="button" value="Menú Principal"></a>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h1></h1>
+                </th>
+            </tr>
+        </table>
+    </center>
+
     <script>
-        alert("Ánimo Crack!!! Tú puedes!!! :D");
         var numpc = parseInt(Math.random()*101);
         var i;
         i=1;
@@ -41,22 +107,24 @@
                     i=1;
                 }else{
                     numusuario = parseInt(numusuario);
-                }
-                if(numusuario==numpc){
-                    alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
-                    break;
-                }else{
-                    if(numpc<numusuario){
-                        alert("El número que debes adivinar es menor, intento No. "+ (i));
+
+                    if(numusuario==numpc){
+                        alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
+                        break;
                     }else{
-                        alert("El número que debes adivinar es mayor, intento No. "+ (i));
+                        if(numpc<numusuario){
+                            alert("El número que debes adivinar es menor, intento No. "+ (i));
+                        }else{
+                            alert("El número que debes adivinar es mayor, intento No. "+ (i));
                     }
                 }
-                if(i==10){
+                }
+                
+                if(i==7){
                 alert("Perdiste :c, el número que tenías que adivinar era el "+numpc);
             } 
                 i++;  
-            }while(i==10);
+            }while(i==7);
             
         }
     </script>
