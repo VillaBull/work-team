@@ -106,40 +106,40 @@
                 if(numusuario.trim()==""){
                     alert("Debe ingresar un número");
                     i=1;
-                }else{
-                    if(i<7){
-                        guardar += numusuario + ", "
-                    }
-                    else{
-                        guardar += "y " + numusuario +"."
-                    }
-                    numusuario = parseInt(numusuario);
-
-                    if(numusuario==numpc){
-                        alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
-                        alert("Puedes volver a intentar de nuevo!!")
-                        location.reload();
-                        break;
+                }else 
+                    if(numusuario>100){
+                        alert("Debe ingresar un número menor o igual 100");
+                        i=1;
                     }else{
-                        if(numpc<numusuario){
-                            alert("El número que debes adivinar es menor, intento No. "+ (i));
-                            
+                        if(i<7){
+                            guardar += numusuario + ", "
+                        }
+                        else{
+                            guardar += "y " + numusuario +"."
+                        }
+                        numusuario = parseInt(numusuario);
+
+                        if(numusuario==numpc){
+                            alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
+                            alert("Puedes volver a intentar de nuevo!!")
+                            location.reload();
+                            break;
                         }else{
+                            if(numpc<numusuario){
+                                alert("El número que debes adivinar es menor, intento No. "+ (i));
                             
-                            alert("El número que debes adivinar es mayor, intento No. "+ (i));
-                            
+                            }else{
+                                alert("El número que debes adivinar es mayor, intento No. "+ (i));
+                        }
                     }
                 }
-                }
-                
                 if(i==7){
                     alert("Perdiste :c, el número que tenías que adivinar era el "+numpc+", los número que ingresaste fueron: "+guardar);
                     alert("Pero puedes volver a intentar de nuevo!!")
                     location.reload();
-            } 
+                 } 
                 i++;  
-            }while(i==7);
-            
+            }while(i==7); 
         }
     </script>
 </body>
