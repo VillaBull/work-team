@@ -6,10 +6,10 @@ function elegir()
 {
     if(respuesta.value == c)
     {
-        alert("Ganaste!");
+        alert("Lograste ver la imagen Felicidades !");
     }
     else
     {
-        alert("Perdiste");
+        alert(" Game over ");
     }   
 }
