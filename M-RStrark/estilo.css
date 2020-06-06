@@ -56,9 +56,22 @@ p{
     height: 50px;
     border-color: midnightblue;
     border-radius: 25px;
-    color: skyblue;
+    color: rgb(48, 104, 187);
 }
 
 #perro:hover{
     background-color: violet;
+}
+
+#archivo{
+    background-color: darkgreen;
+    width: 150px;
+    height: 50px;
+    border-color: azure;
+    border-radius: 25px;
+    color: azure;
+
+}
+#archivor:hover{
+    background-color: crimson;
 }
