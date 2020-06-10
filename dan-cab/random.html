@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="sn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego</title>
+    <!--Etiqueta para poder trabajar CSS dentro de HTML-->
     <style>
+        /*Se centró todo lo que está en el cuerpo del documento*/
         body{
             text-align: center;
         }
+        /*Se justificaron los párrafos*/
         p{
             text-align: justify;
         }
+        /*Se modificaron las dimensiones de la tabla y se le colocó color*/
         table{
             width: 500px;
             height: 400px;
             background-color: rgba(0, 0, 0, 0.25);
         }
+        /*Se modificó eltamaño de letra de las etiquetas label*/
         label{
             font-size: 20px;
         }
+        /*Se modificaron las dimensiones de los botones y se le dió un color*/
         .button{
             width: 125px;
             height: 30px;
@@ -27,19 +33,28 @@
             border: black;
             border-radius: 25px;
         }
+        /*Se agregó opcion que al momento de pasar el mouse sobre el boton cambie de color de fondo y de letra*/
         .button:hover{
             color: white;
             background-color: black;
             cursor: pointer;
         }
+        /*Se modifico los bordes del input text*/
+        .entry{
+            border-radius: 25px;
+        }
 
     </style>
 </head>
+<!--Se colocó imagen de fondo-->
 <body background="C:\laragon\www\work-team\dan-cab\img\slide7.jpg"> 
     <br><br><br><br><br>
+    <!--Se centró la tabla-->
     <center>
+        <!--Se ibsertó tabla-->
         <table>
             <tr>
+                <!--Se colocaron instrucciones del juego-->
                 <th colspan="2">
                     <h1>Instrucciones:</h1>
                 </th>
@@ -67,7 +82,8 @@
                     <label for="">Ingresa el número que piensas</label>
                 </th>
                 <th>
-                    <input type="text" id="numus" placeholder="Ejemplo: 77" required>
+                    <!--Input que recibe el número ingresado por el usuario-->
+                    <input class= "entry" type="text" id="numus" placeholder="Ejemplo: 77" required>
                 </th>
             </tr>
             <tr>
@@ -77,12 +93,14 @@
             </tr>
             <tr>
                 <th colspan="2">
+                    <!--Boton que verifica el número ingresado-->
                     <input type="button" value="Adivinar número" onclick="random()" class="button">
                 </th>
             </tr>
             <tr>
                 <th colspan="2">
-                        <a href="C:\laragon\www\work-team\index.html"><input class="button" type="button" value="Menú Principal"></a>
+                    <!--Boton que lleva a la página principal-->
+                    <a href="C:\laragon\www\work-team\index.html"><input class="button" type="button" value="Menú Principal"></a>
                 </th>
             </tr>
             <tr>
@@ -93,41 +111,74 @@
         </table>
     </center>
 
+    <!--Código JS-->
     <script>
+        //Variable que almacena los números que ingresa el usuario y los acumula
+        var guardar="";
+        //Variable que obtiene el número aleatorio
         var numpc = parseInt(Math.random()*101);
+        //Variable contadora para los intentos
         var i;
         i=1;
         i = parseInt(i);
+        //funcion que se realiza cunado se presiona el boton de adivinar el número
         function random(){
+            //Se almacena el número ingresado por el usuario
             var numusuario = document.getElementById("numus").value;
+            //Creacion de bucle do while para llevar un control en los intentos
             do{
-                
+                //Condicion para que el usuario no mande vacio el numero a adivinar
                 if(numusuario.trim()==""){
+                    //mensaje que le dice al usuario que no puede dejar en blanco el input
                     alert("Debe ingresar un número");
+                    //Los intentos se mantienen en 1
                     i=1;
-                }else{
-                    numusuario = parseInt(numusuario);
-
-                    if(numusuario==numpc){
-                        alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
-                        alert("Puedes volver a intentar de nuevo!!")
-                        location.reload();
-                        break;
+                }else 
+                    //Condicion para que el usuario no ingrese un número mayor a 100
+                    if(numusuario>100){
+                        //mensaje que le dice al usuario que no puede ingresar numeros mayores a 100
+                        alert("Debe ingresar un número menor o igual 100");
+                        //Los intentos se mantienen en 1
+                        i=1;
                     }else{
-                        if(numpc<numusuario){
-                            alert("El número que debes adivinar es menor, intento No. "+ (i));
+                        //Condicion que almacena de forma ordenada lo números introducidos por el usuario
+                        if(i<7){
+                            guardar += numusuario + ", "
+                        }
+                        else{
+                            guardar += "y " + numusuario +"."
+                        }
+                        //Se pasa a entero el string
+                        numusuario = parseInt(numusuario);
+
+                        //Condicion para verificar si el numero introducido es el mismo que el aleatorio
+                        if(numusuario==numpc){
+                            alert("Felicidades, has ganado :D!!! El núemro a adivinar era: "+numpc);
+                            alert("Puedes volver a intentar de nuevo!!")
+                            //Funcion para recargar la página automaticamente
+                            location.reload();
+                            break;
                         }else{
-                            alert("El número que debes adivinar es mayor, intento No. "+ (i));
+                            //condiciones que le ayudan al usuario a adivinar el numero
+                            if(numpc<numusuario){
+                                alert("El número que debes adivinar es menor, intento No. "+ (i));
+                            
+                            }else{
+                                alert("El número que debes adivinar es mayor, intento No. "+ (i));
+                        }
                     }
                 }
-                }
-                
+                //condicion que tiene funcion cuando el usuario hace uso de los 7 intentos mostrandole cuales son los números que ingresó y cuales debía adivinar
                 if(i==7){
-                alert("Perdiste :c, el número que tenías que adivinar era el "+numpc);
-            } 
+                    alert("Perdiste :c, el número que tenías que adivinar era el "+numpc+", los número que ingresaste fueron: "+guardar);
+                    alert("Pero puedes volver a intentar de nuevo!!")
+                    //Funcion para recargar la página automaticamente
+                    location.reload();
+                 } 
+                //Contador aumenta en 1 cada vez que hace un recorrido en el bucle
                 i++;  
-            }while(i==7);
-            
+            //Condicion que debe cumplir el bucle para poder finalizar
+            }while(i==7); 
         }
     </script>
 </body>
